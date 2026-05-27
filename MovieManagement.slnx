@@ -1,1 +1,3 @@
-<Solution />
+<Solution>
+  <Project Path="MovieManagement.Domain/MovieManagement.Domain.csproj" />
+</Solution>
