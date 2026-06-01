@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MovieManagement.Business.Services
 {
-    internal class MovieService
+    public class MovieService
     {
         private IMovieRepository repository;
 
@@ -27,8 +27,6 @@ namespace MovieManagement.Business.Services
                 throw new Exception("A classificação deve estar entre 0 e 5.");
             }
 
-            repository.Add(movie);
-
             foreach (Movie existingMovie in repository.GetAll())
             {
                 if (existingMovie.Title.ToLower() == movie.Title.ToLower())
@@ -36,6 +34,22 @@ namespace MovieManagement.Business.Services
                     throw new Exception("Já existe um filme com esse título.");
                 }
             }
+            repository.Add(movie);
+        }
+
+        public List<Movie> GetAllMovies()
+        {
+            return repository.GetAll();
+        }
+
+        public Movie GetMovie(int id)
+        {
+            return repository.Get(id);
+        }
+
+        public void DeleteMovie(int id)
+        {
+            repository.Delete(id);
         }
 
     }
