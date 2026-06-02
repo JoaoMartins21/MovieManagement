@@ -2,4 +2,5 @@
   <Project Path="MovieManagement.Business/MovieManagement.Business.csproj" />
   <Project Path="MovieManagement.Data/MovieManagement.Data.csproj" />
   <Project Path="MovieManagement.Domain/MovieManagement.Domain.csproj" />
+  <Project Path="MovieManagement.UI/MovieManagement.UI.csproj" Id="59327a4e-1868-423f-a035-08e5afbe51c5" />
 </Solution>

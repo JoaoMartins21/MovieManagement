@@ -34,6 +34,7 @@ namespace MovieManagement.Business.Services
                     throw new Exception("Já existe um filme com esse título.");
                 }
             }
+
             repository.Add(movie);
         }
 
@@ -47,10 +48,22 @@ namespace MovieManagement.Business.Services
             return repository.Get(id);
         }
 
+        public Movie SearchMovieByTitle(string title)
+        {
+            foreach (Movie movie in repository.GetAll())
+            {
+                if (movie.Title.ToLower() == title.ToLower())
+                {
+                    return movie;
+                }
+            }
+
+            return null;
+        }
+
         public void DeleteMovie(int id)
         {
             repository.Delete(id);
         }
-
     }
 }
