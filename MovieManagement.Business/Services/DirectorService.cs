@@ -44,5 +44,19 @@ namespace MovieManagement.Business.Services
         {
             repository.Delete(id);
         }
+
+        public Director SearchDirectorByName(string name)
+        {
+            foreach (Director director in repository.GetAll())
+            {
+                if (director.Name.ToLower() == name.ToLower())
+                {
+                    return director;
+                }
+            }
+
+            return null;
+        }
     }
+
 }

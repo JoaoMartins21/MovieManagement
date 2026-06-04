@@ -47,5 +47,18 @@ namespace MovieManagement.Business.Services
         {
             repository.Delete(id);
         }
+
+        public Category SearchCategoryByName(string name)
+        {
+            foreach (Category category in repository.GetAll())
+            {
+                if (category.Name.ToLower() == name.ToLower())
+                {
+                    return category;
+                }
+            }
+
+            return null;
+        }
     }
 }
