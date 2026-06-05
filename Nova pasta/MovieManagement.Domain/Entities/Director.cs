@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MovieManagement.Domain.Entities
+{
+    public class Director
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string Country { get; set; }
+    }
+}

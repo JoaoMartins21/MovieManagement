@@ -72,15 +72,18 @@ namespace MovieManagement.UI
                         Console.Write("Classificação (0-5): ");
                         movie.Rating = double.Parse(Console.ReadLine());
 
+
                         Console.Write("Id da Categoria: ");
-                        int movieCategoryId = int.Parse(Console.ReadLine());
+                        int categoryId = int.Parse(Console.ReadLine());
 
                         Console.Write("Id do Realizador: ");
-                        int movieDirectorId = int.Parse(Console.ReadLine());
+                        int directorId = int.Parse(Console.ReadLine());
 
-                        movie.Category = categoryService.GetCategory(movieCategoryId);
+                        movie.Category = categoryService.GetCategory(categoryId);
 
-                        movie.Director = directorService.GetDirector(movieDirectorId);
+                        movie.Director = directorService.GetDirector(directorId);
+
+
 
 
 
