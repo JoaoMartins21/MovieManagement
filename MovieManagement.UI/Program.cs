@@ -8,7 +8,7 @@ namespace MovieManagement.UI
     {
         static void Main(string[] args)
         {
-            MovieRepository repository = new MovieRepository();
+            SQLiteMovieRepository repository = new SQLiteMovieRepository();
             MovieService service = new MovieService(repository);
 
             CategoryRepository categoryRepository = new CategoryRepository();
@@ -121,8 +121,8 @@ namespace MovieManagement.UI
                                 Console.WriteLine($"Ano: {m.Year}");
                                 Console.WriteLine($"Língua: {m.Language}");
                                 Console.WriteLine($"Classificação: {m.Rating}");
-                                Console.WriteLine($"Categoria: {m.Category.Name}");
-                                Console.WriteLine($"Realizador: {m.Director.Name}");
+                                //Console.WriteLine($"Categoria: {m.Category.Name}");
+                                //Console.WriteLine($"Realizador: {m.Director.Name}");
                                 Console.WriteLine("----------------------------------------");
                             }
                         }
